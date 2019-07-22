@@ -1,0 +1,11 @@
+
+<main>
+  {{#each recipes}}
+    <div class="recipe-container">
+      <h2>{{this.title}}</h2>
+      <h3>By {{this.creator.firstName}}</h3> {{!-- very wronk !! --}}
+      <img src="{{this.image}}">
+    </div>  
+  {{/each}}
+  <a href="/recipes/create">Create a recipe</a>
+</main>

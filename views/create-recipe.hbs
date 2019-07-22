@@ -1,0 +1,34 @@
+<main>
+  <div class="create-container">
+    <h2>Add a Recipe to the Database</h2>
+
+    <form action="/recipes/create" method="POST">
+      <input name="title" type="text" placeholder="Title">
+      <Select name="level">
+        <option value ="Easy Peasy">Simple</option>
+        <option value ="Amateur Chef">Amateur</option>
+        <option value ="Chef">Advanced</option>
+        <option value ="UltraPro Chef">Professional</option>
+      </Select>
+      <input name="ingredients" type="text" placeholder="Ingredients">
+      <Select name="dishtype">
+        <option value ="Breakfast">Breakfast</option>
+        <option value ="Dish">Dish</option>
+        <option value ="Snack">Snack</option>
+        <option value ="Drink">Drink</option>
+        <option value ="Dessert">Dessert</option>
+        <option value ="Other">Other</option>
+      </Select>
+      <input name="duration" type="text" placeholder="Duration">
+     <select name="creator">
+        {{#each creator}}
+            <option value="{{_id}}"> {{firstName}} {{lastName}} </option>
+        {{/each}}
+    </select>
+      <input name="submit" type="submit" value="Create Recipe">
+    </form>
+
+  </div>
+</main>
+
+

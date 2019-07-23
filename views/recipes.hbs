@@ -1,11 +1,15 @@
 
 <main>
-  {{#each recipes}}
-    <div class="recipe-container">
-      <h2>{{this.title}}</h2>
-      <h3>By {{this.creator.firstName}}</h3> {{!-- very wronk !! --}}
-      <img src="{{this.image}}">
-    </div>  
-  {{/each}}
+  <h2>So WOW, much great. Check out our recipes!</h2>
+  {{!-- <img src="https://images-na.ssl-images-amazon.com/images/I/81-yKbVND-L._SY355_.png"> --}}
+  <div class="all-recipes-container">
+    {{#each recipes}}
+      <div class="recipe-container">
+        <a href="/recipes/{{this._id}}"><h2>{{this.title}}</h2></a>
+        <h3>By {{this.creator.firstName}}</h3> {{!-- very wronk !! --}}
+        <img src="{{this.image}}">
+      </div>  
+    {{/each}}
+  </div>
   <a href="/recipes/create">Create a recipe</a>
 </main>

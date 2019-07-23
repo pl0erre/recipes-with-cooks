@@ -1,0 +1,15 @@
+
+<div class="single-recipe-container">
+  <h3>{{recipe.title}}</h3>
+  <p>By {{recipe.creator.firstName}}</p>
+  <img src="{{recipe.image}}">
+  <p>Level: {{recipe.level}}</p>
+  <p>Dishtype: {{recipe.dishType}}</p>
+  <p>{{recipe.duration}} Minutes preparing time</p>
+  <p>
+    <a href="/recipes/{{recipe._id}}/delete">Delete this recipe.</a>
+  </p>
+  <p>
+    <a href="/recipes/{{recipe._id}}/update">Update this recipe.</a>
+  </p>
+</div>

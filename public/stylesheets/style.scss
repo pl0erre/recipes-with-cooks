@@ -9,6 +9,12 @@ a {
   margin: 30px 0px;;
 }
 
+
+
+h2 {
+  font-size: 2rem;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -16,21 +22,34 @@ main {
   width: 100%;
 }
 
+.all-recipes-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.all-recipes-container h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
 .recipe-container {
   display: flex;
   flex-direction: column;
-  width: 35%;
+  width: 20%;
   justify-content: space-around;
+  border: 3px solid slategrey;
+  margin: 20px 25px 20px 0;
+  padding: 10px;
 }
 
 .recipe-container img {
-  width: 50%;
+  width: 75%;
 }
 
 // .create-container {
-//   width: 10%;
-//   display: flex;
-//   flex-direction: column;
+//   text-align: center;
+//   border: 1px solid black;
 // }
 
 

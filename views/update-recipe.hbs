@@ -1,18 +1,17 @@
 <main>
-  <div class="create-container">
-    <h2>Add a Recipe to the Database</h2>
-
-    <form action="/recipes/create" method="POST">
-      <input name="title" type="text" placeholder="Title">
-      <Select name="level">
+  <div class="update-container">
+    <h2>Update a Recipe</h2>
+    <form action="/recipes/:id/update" method="POST">
+      <input name="title" type="text" value="{{recipe.title}}">
+      <Select selected value="{{recipe.level}}" name="level">
         <option value ="Easy Peasy">Simple</option>
         <option value ="Amateur Chef">Amateur</option>
         <option value ="Chef">Advanced</option>
         <option value ="UltraPro Chef">Professional</option>
       </Select>
-      <input name="ingredients" type="text" placeholder="Ingredients">
-      <input name="cuisine" type="text" placeholder="Cuisine">
-      <Select name="dishtype">
+      <input name="ingredients" type="text" value="{{recipe.ingredients}}">
+      <input name="cuisine" type="text" value="{{recipe.cuisine}}">
+      <Select value="{{recipe.dishType}}" name="dishtype">
         <option value ="Breakfast">Breakfast</option>
         <option value ="Dish">Dish</option>
         <option value ="Snack">Snack</option>
@@ -20,17 +19,16 @@
         <option value ="Dessert">Dessert</option>
         <option value ="Other">Other</option>
       </Select>
-      <input name="image" type="text" placeholder="Image-Url">
-      <input name="duration" type="number" placeholder="Duration">
+      <input name="image" type="text" value="{{recipe.image}}">
+      <input name="duration" type="number" value="{{recipe.duration}}">
      <select name="creator">
         {{#each creator}}
             <option value="{{_id}}"> {{firstName}} {{lastName}} </option>
         {{/each}}
     </select>
-      <input name="submit" type="submit" value="Create Recipe">
+      <input name="submit" type="submit" value="Update Recipe">
     </form>
 
   </div>
 </main>
-
 

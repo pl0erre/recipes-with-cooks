@@ -1,7 +1,7 @@
 <main>
   <div class="update-container">
     <h2>Update a Recipe</h2>
-    <form action="/recipes/:id/update" method="POST">
+    <form action="/recipes/{{recipe._id}}/update" method="POST">
       <input name="title" type="text" value="{{recipe.title}}">
       <Select selected value="{{recipe.level}}" name="level">
         <option value ="Easy Peasy">Simple</option>

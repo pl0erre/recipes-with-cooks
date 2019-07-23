@@ -1,6 +1,8 @@
 <main>
+  
+  
   <div class="create-container">
-    <h2>Add a Recipe to the Database</h2>
+    <h2>Add a Recipe or Cook to the Database</h2>
 
     <form action="/recipes/create" method="POST">
       <input name="title" type="text" placeholder="Title">
@@ -22,12 +24,18 @@
       </Select>
       <input name="image" type="text" placeholder="Image-Url">
       <input name="duration" type="number" placeholder="Duration">
-     <select name="creator">
+      <select name="creator">
         {{#each creator}}
             <option value="{{_id}}"> {{firstName}} {{lastName}} </option>
         {{/each}}
-    </select>
+      </select>
       <input name="submit" type="submit" value="Create Recipe">
+    </form>
+
+    <form action="/recipes/create/cook" method="post">
+      <input name="firstName" type="text" placeholder="First name">
+      <input name="lastName" type="text" placeholder="Last name">
+      <input name="submit" type="submit" value="Add Cook">
     </form>
 
   </div>

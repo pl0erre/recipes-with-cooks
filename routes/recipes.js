@@ -46,6 +46,24 @@ router.post('/create', (req, res, next) => {
     })
 });
 
+router.post('/create/cook', (req, res, next) => {
+  let newCook = {
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    recipes: []
+  };
+
+  Cook.create(newCook)
+    .then(() => {
+      res.redirect("/recipes");
+    })
+    .catch((err) => {
+      res.send("Error in redirecting to recipes page")
+    })
+});
+
+
+
 router.get('/:id', (req, res, next) => {
   Recipe.findById(req.params.id)
   .populate("creator")
@@ -71,16 +89,36 @@ router.get('/:id/update', (req, res) => {
   Recipe.findById(req.params.id)
     .populate("creator")
     .then((recipe) => {
-      res.render("update-recipe", {recipe});
+      Cook.find({})
+      .then((creator)=> {
+        res.render("update-recipe", {recipe, creator});
+      })
     })
     .catch((err) => {
       res.send("Error in update route")
     })
 });
 
-router.post("/:id/update", (req, res) =>{
+router.post('/:id/update', (req, res) =>{
+  debugger
+  let updateRecipe = {
+    title: req.body.title,
+    level: req.body.level,
+    ingredients: req.body.ingredients.split(","),
+    cuisine: req.body.cuisine,
+    dishType: req.body.dishtype,
+    image: req.body.image,
+    duration: req.body.duration,
+    creator: mongoose.Types.ObjectId(req.body.creator)
+  };
 
-})
-
+  Recipe.findByIdAndUpdate(req.params.id, updateRecipe)
+    .then(() => {
+      res.redirect('/recipes/')
+    })
+    .catch((error)=> {
+      res.render("Error")
+  })
+});
 
 module.exports = router;

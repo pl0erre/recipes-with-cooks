@@ -62,8 +62,6 @@ router.post('/create/cook', (req, res, next) => {
     })
 });
 
-
-
 router.get('/:id', (req, res, next) => {
   Recipe.findById(req.params.id)
   .populate("creator")

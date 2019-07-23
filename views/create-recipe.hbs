@@ -1,19 +1,16 @@
 <main>
-  
-  
   <div class="create-container">
     <h2>Add a Recipe or Cook to the Database</h2>
-
     <form action="/recipes/create" method="POST">
-      <input name="title" type="text" placeholder="Title">
+      <input name="title" type="text" placeholder="Title" required>
       <Select name="level">
         <option value ="Easy Peasy">Simple</option>
         <option value ="Amateur Chef">Amateur</option>
         <option value ="Chef">Advanced</option>
         <option value ="UltraPro Chef">Professional</option>
       </Select>
-      <input name="ingredients" type="text" placeholder="Ingredients">
-      <input name="cuisine" type="text" placeholder="Cuisine">
+      <input name="ingredients" type="text" placeholder="Ingredients" required>
+      <input name="cuisine" type="text" placeholder="Cuisine" required>
       <Select name="dishtype">
         <option value ="Breakfast">Breakfast</option>
         <option value ="Dish">Dish</option>
@@ -22,20 +19,20 @@
         <option value ="Dessert">Dessert</option>
         <option value ="Other">Other</option>
       </Select>
-      <input name="image" type="text" placeholder="Image-Url">
-      <input name="duration" type="number" placeholder="Duration">
+      <input name="image" type="text" placeholder="Image-Url" required>
+      <input value="0" name="duration" type="number" placeholder="Duration" required>
       <select name="creator">
         {{#each creator}}
             <option value="{{_id}}"> {{firstName}} {{lastName}} </option>
         {{/each}}
       </select>
-      <input name="submit" type="submit" value="Create Recipe">
+      <input class="submit" name="submit" type="submit" value="Create Recipe">
     </form>
 
     <form action="/recipes/create/cook" method="post">
-      <input name="firstName" type="text" placeholder="First name">
-      <input name="lastName" type="text" placeholder="Last name">
-      <input name="submit" type="submit" value="Add Cook">
+      <input required name="firstName" type="text" placeholder="First name">
+      <input required name="lastName" type="text" placeholder="Last name">
+      <input class="submit" name="submit" type="submit" value="Add Cook">
     </form>
 
   </div>

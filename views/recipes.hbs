@@ -5,7 +5,7 @@
   <div class="all-recipes-container">
     {{#each recipes}}
       <div class="recipe-container">
-        <a href="/recipes/{{this._id}}"><h2>{{this.title}}</h2></a>
+        <a href="/recipes/{{this._id}}"><h3>{{this.title}}</h3></a>
         <h3>By {{this.creator.firstName}}</h3> {{!-- very wronk !! --}}
         <img src="{{this.image}}">
       </div>  

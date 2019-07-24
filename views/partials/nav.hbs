@@ -1,10 +1,24 @@
-<nav>
+{{!-- <nav class="nav-bar">
   <ul>
-    <li><a href="/">Home</a></li>
+    <li><a href="/"><img src="http://pngimg.com/uploads/chef/chef_PNG161.png" width="30px"></a></li>
     <li><a href="/recipes">Recipes</a></li>
     <li><a href="/recipes/create">Create Recipe</a></li>
     <li class="user-nav"><a href="/user/login">Login</a></li>
     <li class="user-nav"><a href="/session/logout">Logout</a></li>
     <li class="user-nav"><a href="/session/secret">Profile</a></li>
   </ul>
+</nav> --}}
+
+
+<nav>
+  <div class="nav-left">
+    <a href="/" class="nav-home-link"><img src="http://pngimg.com/uploads/chef/chef_PNG161.png" width="28px"></a>
+    <a href="/recipes" class="nav-link">Recipes</a>
+    <a href="/recipes/create" class="nav-link">Create Recipe</a>
+  </div>
+  <div class="nav-right">
+    <a href="/user/login" class="nav-link">Login</a>
+    <a href="/session/logout" class="nav-link">Logout</a>
+    <a href="/session/secret" class="nav-link">Profile</a>
+  </div>
 </nav>

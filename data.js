@@ -46,7 +46,7 @@ module.exports =
         ingredients: ['1/2 cup light brown sugar', '1 large egg', '2 tablespoons milk', '1 1/4 teaspoons vanilla extract', '2 cups semisweet chocolate chips'],
         cuisine: 'French',
         dishType: 'Dish',
-        image: 'https://images.media-allrecipes.com/userphotos/720x405/815964.jpg',
+        image: 'https://images-gmi-pmc.edge-generalmills.com/5504a4d4-ac62-4e63-b475-563ba492ccff.jpg',
         duration: 30,
         creator: 'Chef Jennifer'
       }

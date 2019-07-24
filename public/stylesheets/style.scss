@@ -1,3 +1,5 @@
+
+// === GENERIC ===
 * {
   padding: 0;
   margin: 0;
@@ -15,15 +17,21 @@ body {
   height: 100%;
   width: 100%;
   // background-color: lightblue;
-  background-image: url("https://i.kym-cdn.com/entries/icons/facebook/000/013/564/doge.jpg");
+  background-image: url("https://images.pexels.com/photos/1565982/pexels-photo-1565982.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
   background-size: cover;
   background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+p {
+  font-size: 1.2rem;
+  padding: 3px 0;
 }
 
 a {
-  color: rgb(10, 114, 155);
-  font-size: 2rem;
-  margin: 30px 0px;
+  color: rgba(0, 110, 92, 0.746);
+  font-size: 1.2rem;
+  margin: 30px 20px;
   text-decoration: none;
 }
 
@@ -48,32 +56,38 @@ main {
   width: 100%;
 }
 
+// === FORMS ===
 form {
   display: flex;
   flex-direction: column;
-  // margin-left: 60px;
 }
 
 input, select {
   margin: 10px;
-  padding: 5px 10px;
-  height: 30px;
+  padding: 8px 10px;
 }
 
 .submit {
   background-color: rgb(218, 224, 214);
   font-size: 1.4rem;
+  height: 40px;
 }
 
+// === ALL RECIPES ===
 .all-recipes-container {
   display: flex;
   flex-wrap: wrap;
+  text-align: center;
 }
 
-.all-recipes-container h2 {
+.all-recipes-container h3 {
   font-size: 1.2rem;
-  margin: 0;
+  margin: 5px 0;
   padding: 0;
+}
+
+.all-recipes-container a {
+  margin: 0;
 }
 
 .recipe-container {
@@ -84,19 +98,53 @@ input, select {
   border: 3px solid slategrey;
   margin: 20px 25px;
   padding: 20px;
-  background-color: rgba(230, 230, 250, 0.555)
+  background-color: rgba(230, 230, 250, 0.550);
+  border-radius: 20px;
 }
 
 .recipe-container img {
   width: 75%;
+  border-radius: 20px;
 }
 
+.add-recipe {
+  font-size: 1.6rem;
+  border: 3px solid slategrey;
+  background-color: rgba(213, 255, 211, 0.55);
+  padding: 5px 10px;
+}
+// === SINGLE RECIPE ===
+.single-recipe-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: space-around;
+  border: 3px solid slategrey;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(230, 230, 250, 0.550)
+}
+
+.single-recipe-container h3 {
+  font-size: 1.6rem;
+}
+
+.single-recipe-container a {
+  margin: 0;
+}
+
+.single-recipe-container img {
+  margin: 0;
+  width: 80%;
+}
+
+// === HOME ===
 .home-container {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
-  background-color: rgba(230, 230, 250, 0.555);
+  background-color: rgba(230, 230, 250, 0.550);
   border: 5px solid slategray;
 }
 
@@ -104,6 +152,7 @@ input, select {
   padding: 20px;
 }
 
+// === LOGIN/ SIGNUP ===
 .login-container {
   display: flex;
   flex-direction: column;
@@ -111,19 +160,20 @@ input, select {
   margin: 0 auto;
   padding: 30px;
   text-align: center;
-  background-color: rgba(230, 230, 250, 0.555);
+  background-color: rgba(230, 230, 250, 0.550);
 }
 
 .login-container a {
   font-size: 1rem;
+
 }
 
 .login-container button {
   height: 30px;
   margin: 10px;
-
 }
 
+// === NOTIFICATIONS ===
 .error-message {
   background: #F02B63;
   box-sizing: border-box;
@@ -133,43 +183,87 @@ input, select {
   width: 100%;
 }
 
+.success-message {
+  background: rgb(68, 211, 87);
+  box-sizing: border-box;
+  color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+}
+
+// === NAV BAR ===
 nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: rgb(30, 30, 53);
-  width: 100%; 
-  height: 60px;
+  color: white;
+  width: 100%;
+  padding: 5px 0;
+  border: 1px solid rgb(78, 78, 78);
 }
-
 nav a {
-  font-size: 1rem;
-  color: rgb(93, 54, 129);
-  text-decoration: none;
+  margin: 0; 
+  padding: 0;
+  color: rgba(255, 255, 255, 0.733);
+
 }
 
-nav ul {
-  list-style-type: none;
-  margin: 15px;
-  
+nav img {
+  padding: 0 4px;
 }
 
-nav li{
-  display: inline;
-  background-color: rgb(194, 157, 157);
-  margin: 10px 20px;;
-  padding: 5px 30px;
-  border: 5px solid slategrey;
+.nav-home-link {
+  border: 1px solid rgb(78, 78, 78);
+  background-color: rgba(181, 255, 239, 0.479);
+  margin: 0 20px;
 }
 
-.user-nav {
-  margin-left: 200px;
+.nav-link {
+  padding: 6px 20px;
+  margin: 2px;
+  background-color: rgba(245, 245, 245, 0.431);
+  border: 1px solid rgb(78, 78, 78);
 }
 
+.nav-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+}
+
+// === FOOTER ===
 footer {
   background-color: rgb(30, 30, 53);
   width: 100%;
   color: white;
-  height: 60px;
   font-size: 1.8rem;
 }
 footer p {
   padding: 10px; 
+}
+
+// === PROFILE PAGE ===
+.secret-main {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(230, 230, 250, 0.550);
+  width: 30%;
+  margin: 0 auto;
+  padding: 30px;
+  border: 5px solid slategrey;
+}
+
+.secret-main h2, img{
+  margin: 0 auto;
+  font-size: 3rem;
 }

@@ -12,14 +12,19 @@ body {
   justify-content: space-between;
   height: 100%;
   width: 100%;
-  background-image: url("https://i.kym-cdn.com/entries/icons/facebook/000/013/564/doge.jpg");
+  background-image: url("https://images.pexels.com/photos/1565982/pexels-photo-1565982.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  overflow-x: hidden; }
+
+p {
+  font-size: 1.2rem;
+  padding: 3px 0; }
 
 a {
-  color: #0a729b;
-  font-size: 2rem;
-  margin: 30px 0px;
+  color: rgba(0, 110, 92, 0.746);
+  font-size: 1.2rem;
+  margin: 30px 20px;
   text-decoration: none; }
 
 h1 {
@@ -44,21 +49,25 @@ form {
 
 input, select {
   margin: 10px;
-  padding: 5px 10px;
-  height: 30px; }
+  padding: 8px 10px; }
 
 .submit {
   background-color: #dae0d6;
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  height: 40px; }
 
 .all-recipes-container {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  text-align: center; }
 
-.all-recipes-container h2 {
+.all-recipes-container h3 {
   font-size: 1.2rem;
-  margin: 0;
+  margin: 5px 0;
   padding: 0; }
+
+.all-recipes-container a {
+  margin: 0; }
 
 .recipe-container {
   display: flex;
@@ -68,17 +77,45 @@ input, select {
   border: 3px solid slategrey;
   margin: 20px 25px;
   padding: 20px;
-  background-color: rgba(230, 230, 250, 0.555); }
+  background-color: rgba(230, 230, 250, 0.55);
+  border-radius: 20px; }
 
 .recipe-container img {
-  width: 75%; }
+  width: 75%;
+  border-radius: 20px; }
+
+.add-recipe {
+  font-size: 1.6rem;
+  border: 3px solid slategrey;
+  background-color: rgba(213, 255, 211, 0.55);
+  padding: 5px 10px; }
+
+.single-recipe-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: space-around;
+  border: 3px solid slategrey;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(230, 230, 250, 0.55); }
+
+.single-recipe-container h3 {
+  font-size: 1.6rem; }
+
+.single-recipe-container a {
+  margin: 0; }
+
+.single-recipe-container img {
+  margin: 0;
+  width: 80%; }
 
 .home-container {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
-  background-color: rgba(230, 230, 250, 0.555);
+  background-color: rgba(230, 230, 250, 0.55);
   border: 5px solid slategray; }
 
 .home-container h2 {
@@ -91,7 +128,7 @@ input, select {
   margin: 0 auto;
   padding: 30px;
   text-align: center;
-  background-color: rgba(230, 230, 250, 0.555); }
+  background-color: rgba(230, 230, 250, 0.55); }
 
 .login-container a {
   font-size: 1rem; }
@@ -108,38 +145,75 @@ input, select {
   padding: 20px;
   width: 100%; }
 
+.success-message {
+  background: #44d357;
+  box-sizing: border-box;
+  color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%; }
+
 nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: #1e1e35;
+  color: white;
   width: 100%;
-  height: 60px; }
+  padding: 5px 0;
+  border: 1px solid #4e4e4e; }
 
 nav a {
-  font-size: 1rem;
-  color: #5d3681;
-  text-decoration: none; }
+  margin: 0;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.733); }
 
-nav ul {
-  list-style-type: none;
-  margin: 15px; }
+nav img {
+  padding: 0 4px; }
 
-nav li {
-  display: inline;
-  background-color: #c29d9d;
-  margin: 10px 20px;
-  padding: 5px 30px;
-  border: 5px solid slategrey; }
+.nav-home-link {
+  border: 1px solid #4e4e4e;
+  background-color: rgba(181, 255, 239, 0.479);
+  margin: 0 20px; }
 
-.user-nav {
-  margin-left: 200px; }
+.nav-link {
+  padding: 6px 20px;
+  margin: 2px;
+  background-color: rgba(245, 245, 245, 0.431);
+  border: 1px solid #4e4e4e; }
+
+.nav-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px; }
+
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px; }
 
 footer {
   background-color: #1e1e35;
   width: 100%;
   color: white;
-  height: 60px;
   font-size: 1.8rem; }
 
 footer p {
   padding: 10px; }
+
+.secret-main {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(230, 230, 250, 0.55);
+  width: 30%;
+  margin: 0 auto;
+  padding: 30px;
+  border: 5px solid slategrey; }
+
+.secret-main h2, img {
+  margin: 0 auto;
+  font-size: 3rem; }
 
 /*# sourceMappingURL=style.css.map */

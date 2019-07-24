@@ -70,4 +70,7 @@ const recipesRouter = require('./routes/recipes');
 const userRouter = require('./routes/user');
   app.use('/user', userRouter);
 
+const sessionRouter = require('./routes/session')
+  app.use('/session', sessionRouter);
+
 module.exports = app;
